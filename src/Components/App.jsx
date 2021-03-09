@@ -19,9 +19,7 @@ const App = () => {
     return (
     <div>
         <Header />
-        <div>
-            {notes.map(createNote)}
-        </div>
+        {notes.map(createNote)}
         <Footer />
     </div>
     );
