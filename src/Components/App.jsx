@@ -15,14 +15,16 @@ const createNote = (note) =>
     );
 
 
-function App() {
-    return <div>
+const App = () => {
+    return (
+    <div>
         <Header />
         <div>
             {notes.map(createNote)}
         </div>
         <Footer />
-    </div>;
+    </div>
+    );
 };
 
 export default App;
