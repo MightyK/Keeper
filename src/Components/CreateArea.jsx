@@ -44,13 +44,14 @@ const CreateArea = (props) => {
     return (
         <div>
             <form className='create-note'>
-                {}
+                {zoomedIn ? 
                 <input 
                     name='title'
                     onChange={handleChange}
                     value={noteTitle}
                     placeholder='title'    
-                 />
+                 /> : null
+                }
                 <textarea 
                     name='content'
                     onChange={handleChange}
