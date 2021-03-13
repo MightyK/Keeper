@@ -38,12 +38,12 @@ const CreateArea = (props) => {
                     value={noteTitle}
                     placeholder='title'    
                  />
-                <input 
+                <textarea 
                     name='content'
                     onChange={handleChange}
                     value={noteContent}
                     placeholder='Write a note...'
-                    rows='3'    
+                    rows='3'
                  />
                  <button
                     onClick={submitNote}    
