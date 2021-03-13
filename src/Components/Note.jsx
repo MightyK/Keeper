@@ -5,6 +5,9 @@ const Note = props => {
     <div className="note">
         <h1>{props.name}</h1>
         <p>{props.info}</p>
+        <button>
+            DELETE
+        </button>
     </div>
     );
 };
