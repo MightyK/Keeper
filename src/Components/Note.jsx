@@ -1,5 +1,5 @@
 import React from 'react';
-import DeleteRoundedIcon from '@material-ui/icons/DeleteRounded';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const Note = (props) => {
 
@@ -14,7 +14,7 @@ const Note = (props) => {
         <button 
             onClick={handleClick}
         >
-            <DeleteRoundedIcon />
+            <DeleteIcon />
         </button>
     </div>
     );

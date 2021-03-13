@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import NoteAddRoundedIcon from '@material-ui/icons/NoteAddRounded';
 
 const CreateArea = (props) => {
     
@@ -48,7 +49,7 @@ const CreateArea = (props) => {
                  <button
                     onClick={submitNote}    
                 >
-                    Add
+                    <NoteAddRoundedIcon />
                 </button>
             </form>
         </div>
