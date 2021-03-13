@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import NoteAddRoundedIcon from '@material-ui/icons/NoteAddRounded';
+import Fab from '@material-ui/core/Fab';
 
 const CreateArea = (props) => {
     
@@ -46,11 +47,11 @@ const CreateArea = (props) => {
                     placeholder='Write a note...'
                     rows='3'
                  />
-                 <button
+                 <Fab
                     onClick={submitNote}    
                 >
                     <NoteAddRoundedIcon />
-                </button>
+                </Fab>
             </form>
         </div>
     );
