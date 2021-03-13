@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Note = props => {
+const Note = (props) => {
 
     const handleClick = () => {
         props.onDelete(props.id);
@@ -8,8 +8,8 @@ const Note = props => {
 
     return (
     <div className="note">
-        <h1>{props.name}</h1>
-        <p>{props.info}</p>
+        <h1>{props.title}</h1>
+        <p>{props.content}</p>
         <button 
             onClick={handleClick}
         >

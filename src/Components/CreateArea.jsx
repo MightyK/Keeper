@@ -16,12 +16,12 @@ const CreateArea = (props) => {
             return {
                 ...prevNote,
                 [name]: value
-            };
+            }
         });
     }
 
     const submitNote = (event) => {
-        props.onAdd(note)
+        props.onAdd(note);
         setNote({
             title: '',
             content: ''
