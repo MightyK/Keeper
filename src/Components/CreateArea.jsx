@@ -1,15 +1,25 @@
 import React, {useState} from 'react';
 import NoteAddRoundedIcon from '@material-ui/icons/NoteAddRounded';
 import Fab from '@material-ui/core/Fab';
+import Zoom from '@material-ui/core/Zoom';
 
 const CreateArea = (props) => {
     
+    const [zoomedIn, setZoomedIn] = useState(false);
+    const [rows, setRows] = useState('');
     const [note, setNote] = useState({
         title: '',
         content: ''
     });
 
     const {title: noteTitle, content: noteContent} = note;
+    
+    const expand = () => {
+        setRows('3')
+        setZoomedIn(true);
+
+    }
+
 
     const handleChange = (event) => {
         const {name, value} = event.target;
@@ -34,6 +44,7 @@ const CreateArea = (props) => {
     return (
         <div>
             <form className='create-note'>
+                {}
                 <input 
                     name='title'
                     onChange={handleChange}
@@ -45,13 +56,16 @@ const CreateArea = (props) => {
                     onChange={handleChange}
                     value={noteContent}
                     placeholder='Write a note...'
-                    rows='3'
+                    rows={rows}
+                    onClick={expand}
                  />
-                 <Fab
+            <Zoom in={zoomedIn}>
+                <Fab
                     onClick={submitNote}    
                 >
                     <NoteAddRoundedIcon />
                 </Fab>
+            </Zoom>
             </form>
         </div>
     );
