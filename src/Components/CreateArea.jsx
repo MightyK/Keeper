@@ -33,7 +33,7 @@ const CreateArea = (props) => {
 
     return (
         <div>
-            <form>
+            <form className='create-note'>
                 <input 
                     name='title'
                     onChange={handleChange}
